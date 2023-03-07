@@ -4,7 +4,6 @@ const SpotifyWebApi = require('spotify-web-api-node')
 const cors = require('cors');
 const lyricsFinder = require('lyrics-finder')
 const bodyParser = require('body-parser')
-// var playlist_url = "https://api.spotify.com/v1/users/{user_id}/playlists"
 
 
 const app = express();
