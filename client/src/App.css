@@ -186,22 +186,6 @@ body {
     font-size: max(1.2vw, 10px);
 }
 
-#sidebar-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;;
-  max-width: 15%;
-  min-height: fit-content;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-  padding-left: 2px;
-  font-family: 'Optima', sans-serif;
-  font-size: max(1.2vw, 12px);
-}
 
 @media (max-width: 900px) {
     .searchBar{

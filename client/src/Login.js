@@ -10,7 +10,7 @@ export default function Login() {
             <div className='logo'>
                 <img src='./logo2.png'/>
             </div>
-            <div class="wrap">
+            <div className="wrap">
                 <button className="login">
                     <a className='login' href={AUTH_URL}>
                         Login to Howlin' Sounds

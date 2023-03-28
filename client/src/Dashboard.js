@@ -74,19 +74,6 @@ export default function Dashboard({code}) {
 
     return (
         <>
-        <Container id="sidebar-wrapper">
-        <div id="flex" class=" bg-white" >
-                <div class="sidebar-heading border-bottom bg-light"><b>Playlists</b></div>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Country</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Classical</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Rock</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">80's</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">R&B</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Hip Hop</a>
-                </div>
-            </div>
-        </Container>
         <Container className='searchBar'>
             <div className='db-logo'>
                 <img src='./db-logo.png'/>
@@ -114,6 +101,7 @@ export default function Dashboard({code}) {
             </div>
             <div>
                 <Player accessToken={accessToken} trackUri={playingTrack?.uri} />
+                
             </div>
         </Container>
         </>
