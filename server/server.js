@@ -59,11 +59,12 @@ app.post('/login', (req, res) => {
 })
 
 app.get('/lyrics', async (req,res) => {
-    console.log(req.query.track)
+    console.log("62", req.query.track)
     let lyrics = await lyricssearchermusixmatch(req.query.track)
-        console.log(lyrics)
-        if (!lyrics) lyrics = "No Lyrics Found!"
-    res.json({ lyrics })
+    if (!lyrics) {lyrics = "No Lyrics Found!"}
+    let lyrics2 = lyrics.lyrics
+    console.log(lyrics2)
+    res.json({ lyrics2 })
 })
 
 
