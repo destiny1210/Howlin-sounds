@@ -36,7 +36,8 @@ export default function Dashboard({code}) {
                 artistName: playingTrack.artist
             }
         }).then(res => {
-            setLyrics(console.log(lyrics))
+            console.log(res.data.lyrics2)
+            setLyrics(res.data.lyrics2)
         })
     }, [playingTrack])
 
