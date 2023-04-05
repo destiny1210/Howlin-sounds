@@ -30,7 +30,7 @@ export default function Dashboard({code}) {
         
         if (!playingTrack) return
 
-        axios.get('http://localhost:3001/lyrics', {
+        axios.get('/lyrics', {
             params: {
                 track: playingTrack.title,
                 artistName: playingTrack.artist
