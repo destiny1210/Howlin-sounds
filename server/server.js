@@ -4,6 +4,9 @@ const SpotifyWebApi = require('spotify-web-api-node')
 const cors = require('cors');
 const lyricsFinder = require('lyrics-finder')
 const bodyParser = require('body-parser')
+const lyricssearchermusixmatch = require('lyrics-searcher-musixmatch').default
+
+
 
 
 const app = express();
@@ -56,16 +59,14 @@ app.post('/login', (req, res) => {
 })
 
 app.get('/lyrics', async (req,res) => {
-    const lyrics =
-        (await lyricsFinder(req.query.artist, req.query.track)) || "No Lyrics Found!"
-    res.json({lyrics})
+    console.log("62", req.query.track)
+    let lyrics = await lyricssearchermusixmatch(req.query.track)
+    if (!lyrics) {lyrics = "No Lyrics Found!"}
+    let lyrics2 = lyrics.lyrics
+    console.log(lyrics2)
+    res.json({ lyrics2 })
 })
 
-// app.get('/playlist', async (req,res) => {
-//     const playlist = 
 
 app.listen(3001)
 
-// , () => {
-//     console.log('Listening on port 3001')
-// })
